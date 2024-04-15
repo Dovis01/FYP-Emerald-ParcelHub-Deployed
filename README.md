@@ -1,6 +1,10 @@
-# Emerald Parcel Hub System
+# Emerald Parcel Hub System Deployed Version
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).  And this system is made by Mr. Shijin Zhang from SETU (Ireland). This is my Final Year Project for Software System Practice.
+
+## Deployed Link
+
+The deployed version of this system is available at [`Emerald Parcel Hub System`](https://fyp-emerald-parcel-hub-deployed.vercel.app/auth/signIn).
 
 ## Some config before running
 
