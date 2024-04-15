@@ -1,0 +1,72 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+fyp-next-code/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+fyp-next-code/.next/
+fyp-next-code/.env
+/out/
+
+# production
+/build
+.idea
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+fyp-springboot-code/HELP.md
+fyp-springboot-code/.env
+.env
+target/
+!fyp-springboot-code/.mvn/wrapper/maven-wrapper.jar
+!fyp-springboot-code/src/main/**/target/
+!fyp-springboot-code/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+fyp-springboot-code/nbproject/private/
+fyp-springboot-code/nbbuild/
+fyp-springboot-code/dist/
+fyp-springboot-code/nbdist/
+fyp-springboot-code/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
