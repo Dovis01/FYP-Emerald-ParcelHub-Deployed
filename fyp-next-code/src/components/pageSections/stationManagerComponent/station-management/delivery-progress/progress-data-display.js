@@ -39,6 +39,10 @@ export const ProgressDataDisplay = () => {
         const fetchData = async () => {
             const result = await getDeliveringParcelsDataOfParcelStation(auth.user?.stationId);
             if (!result.success) {
+                if(result.data == null){
+                    toast.warning('Ooops! There is no parcel data to display!');
+                    return;
+                }
                 toast.error('Ooops! ' + result.msg);
                 return;
             }
@@ -127,7 +131,7 @@ export const ProgressDataDisplay = () => {
         };
 
         fetchData();
-    }, [auth.user?.stationId, googleMap]);
+    }, []);
 
     const columns = [
         {field: 'id', headerName: 'Order Id', headerClassName: 'super-app-theme--header', width: 100},

@@ -3,7 +3,7 @@
  * */
 
 export const loginByUsername = async (username, password, roleType) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/${roleType}/v1/login?authMethod=username`, {
+    const response = await fetch(`http://localhost:9090/api/${roleType}/v1/login?authMethod=username`, {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -14,7 +14,7 @@ export const loginByUsername = async (username, password, roleType) => {
 };
 
 export const loginByEmail = async (email, password, roleType) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/${roleType}/v1/login?authMethod=email`, {
+    const response = await fetch(`http://localhost:9090/api/${roleType}/v1/login?authMethod=email`, {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -25,7 +25,7 @@ export const loginByEmail = async (email, password, roleType) => {
 };
 
 export const register = async (registrationData, roleType) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/${roleType}/v1/register`, {
+    const response = await fetch(`http://localhost:9090/api/${roleType}/v1/register`, {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -36,7 +36,7 @@ export const register = async (registrationData, roleType) => {
 };
 
 export const resetPassword = async (body) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/registeredAccount/v1/reset-password`, {
+    const response = await fetch(`http://localhost:9090/api/registeredAccount/v1/reset-password`, {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -52,7 +52,7 @@ export const resetPassword = async (body) => {
  * */
 
 export const uploadEcommerceSimulationRealTimeData = async (simulationData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/ecommerceJsonData/v1/insert`, {
+    const response = await fetch(`http://localhost:9090/api/ecommerceJsonData/v1/insert`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -64,7 +64,7 @@ export const uploadEcommerceSimulationRealTimeData = async (simulationData) => {
 };
 
 export const uploadEcommerceSimulationPastTimeData = async (simulationPastData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/pastStatistics/v1/insert`, {
+    const response = await fetch(`http://localhost:9090/api/pastStatistics/v1/insert`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -76,7 +76,7 @@ export const uploadEcommerceSimulationPastTimeData = async (simulationPastData) 
 };
 
 export const getEcommerceSimulationPastTimeDataByRoleType = async (roleType) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/pastStatistics/v1/part-data/${roleType}`, {
+    const response = await fetch(`http://localhost:9090/api/pastStatistics/v1/part-data/${roleType}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -87,7 +87,7 @@ export const getEcommerceSimulationPastTimeDataByRoleType = async (roleType) => 
 };
 
 export const clearAllEcommerceSimulationData = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/ecommerceJsonData/v1/delete-all`, {
+    const response = await fetch(`http://localhost:9090/api/ecommerceJsonData/v1/delete-all`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -98,7 +98,7 @@ export const clearAllEcommerceSimulationData = async () => {
 };
 
 export const clearSelectedEcommerceSimulationData = async (selectedIds) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/ecommerceJsonData/v1/delete-multiple`, {
+    const response = await fetch(`http://localhost:9090/api/ecommerceJsonData/v1/delete-multiple`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -110,7 +110,7 @@ export const clearSelectedEcommerceSimulationData = async (selectedIds) => {
 };
 
 export const getAllEcommerceSimulationData = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/ecommerceJsonData/v1/all-data`, {
+    const response = await fetch(`http://localhost:9090/api/ecommerceJsonData/v1/all-data`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -125,7 +125,7 @@ export const getAllEcommerceSimulationData = async () => {
  * */
 
 export const transferCusTrackParcelRouteAddressToLatAndLng = async (routeAddressesData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/googleGeocodingCache/v1/transfer/route-addresses/cus-track-parcel`, {
+    const response = await fetch(`http://localhost:9090/api/googleGeocodingCache/v1/transfer/route-addresses/cus-track-parcel`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -137,7 +137,7 @@ export const transferCusTrackParcelRouteAddressToLatAndLng = async (routeAddress
 };
 
 export const transferStationDeliveringParcelsRouteAddressToLatAndLng = async (routeAddressesData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/googleGeocodingCache/v1/transfer/route-addresses/station-delivering-parcels`, {
+    const response = await fetch(`http://localhost:9090/api/googleGeocodingCache/v1/transfer/route-addresses/station-delivering-parcels`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -149,7 +149,7 @@ export const transferStationDeliveringParcelsRouteAddressToLatAndLng = async (ro
 };
 
 export const transferCourierCollectionRouteAddressToLatAndLng = async (routeAddressesData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/googleGeocodingCache/v1/transfer/route-addresses/courier-collection`, {
+    const response = await fetch(`http://localhost:9090/api/googleGeocodingCache/v1/transfer/route-addresses/courier-collection`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -161,7 +161,7 @@ export const transferCourierCollectionRouteAddressToLatAndLng = async (routeAddr
 };
 
 export const transferCourierDeliveryRouteAddressToLatAndLng = async (routeAddressesData) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/googleGeocodingCache/v1/transfer/route-addresses/courier-delivery`, {
+    const response = await fetch(`http://localhost:9090/api/googleGeocodingCache/v1/transfer/route-addresses/courier-delivery`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -173,7 +173,7 @@ export const transferCourierDeliveryRouteAddressToLatAndLng = async (routeAddres
 };
 
 export const getAddressLatitudeAndLongitude = async (addresses) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/googleGeocodingCache/v1/transfer/addresses`, {
+    const response = await fetch(`http://localhost:9090/api/googleGeocodingCache/v1/transfer/addresses`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -189,7 +189,7 @@ export const getAddressLatitudeAndLongitude = async (addresses) => {
  * */
 
 export const getAllCustomersInfoDataForAdmin = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/customer/v1/all/customers-info`, {
+    const response = await fetch(`http://localhost:9090/api/customer/v1/all/customers-info`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -200,7 +200,7 @@ export const getAllCustomersInfoDataForAdmin = async () => {
 };
 
 export const getAllCustomerPersonalOrdersData = async (customerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/order/v1/part-data/customer/${customerId}`, {
+    const response = await fetch(`http://localhost:9090/api/order/v1/part-data/customer/${customerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -211,7 +211,7 @@ export const getAllCustomerPersonalOrdersData = async (customerId) => {
 };
 
 export const getAllCustomerPersonalParcelsData = async (customerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcel/v1/part-data/customer/${customerId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcel/v1/part-data/customer/${customerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -226,7 +226,7 @@ export const getAllCustomerPersonalParcelsData = async (customerId) => {
  * */
 
 export const getAllCompanyEmployeesInfoDataForAdmin = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/companyEmployee/v1/all/employees-info`, {
+    const response = await fetch(`http://localhost:9090/api/companyEmployee/v1/all/employees-info`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -241,7 +241,7 @@ export const getAllCompanyEmployeesInfoDataForAdmin = async () => {
  * */
 
 export const getAllCouriersInfoDataForAdmin = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courier/v1/all/couriers-info`, {
+    const response = await fetch(`http://localhost:9090/api/courier/v1/all/couriers-info`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -252,7 +252,7 @@ export const getAllCouriersInfoDataForAdmin = async () => {
 };
 
 export const getCourierTodayCollectionTasks = async (courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierCollectionRecord/v1/today-tasks/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courierCollectionRecord/v1/today-tasks/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -263,7 +263,7 @@ export const getCourierTodayCollectionTasks = async (courierId) => {
 };
 
 export const CourierFinishTodayCollectionTasks = async (courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierCollectionRecord/v1/finish-tasks/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courierCollectionRecord/v1/finish-tasks/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -274,7 +274,7 @@ export const CourierFinishTodayCollectionTasks = async (courierId) => {
 };
 
 export const resetParcelsCollectionTasks = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierCollectionRecord/v1/reset-all-tasks`, {
+    const response = await fetch(`http://localhost:9090/api/courierCollectionRecord/v1/reset-all-tasks`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -285,7 +285,7 @@ export const resetParcelsCollectionTasks = async () => {
 };
 
 export const getCourierTodayDeliveryTasks = async (courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierDeliveryRecord/v1/today-tasks/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courierDeliveryRecord/v1/today-tasks/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -296,7 +296,7 @@ export const getCourierTodayDeliveryTasks = async (courierId) => {
 };
 
 export const CourierFinishTodayDeliveryTasks = async (courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierDeliveryRecord/v1/finish-tasks/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courierDeliveryRecord/v1/finish-tasks/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -307,7 +307,7 @@ export const CourierFinishTodayDeliveryTasks = async (courierId) => {
 };
 
 export const resetParcelsDeliveryTasks = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courierDeliveryRecord/v1/reset-all-tasks`, {
+    const response = await fetch(`http://localhost:9090/api/courierDeliveryRecord/v1/reset-all-tasks`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -318,7 +318,7 @@ export const resetParcelsDeliveryTasks = async () => {
 };
 
 export const updateCourierPersonalInfo = async (infoBody, courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courier/v1/personal/update/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courier/v1/personal/update/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -330,7 +330,7 @@ export const updateCourierPersonalInfo = async (infoBody, courierId) => {
 };
 
 export const disableCourier = async (courierId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/courier/v1/update/disable/${courierId}`, {
+    const response = await fetch(`http://localhost:9090/api/courier/v1/update/disable/${courierId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -345,7 +345,7 @@ export const disableCourier = async (courierId) => {
  * */
 
 export const getAllStationManagersInfoDataForAdmin = async () => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationManager/v1/all/stationManagers-info`, {
+    const response = await fetch(`http://localhost:9090/api/stationManager/v1/all/stationManagers-info`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -356,7 +356,7 @@ export const getAllStationManagersInfoDataForAdmin = async () => {
 };
 
 export const updateStationManagerPersonalInfo = async (infoBody, stationManagerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationManager/v1/personal/update/${stationManagerId}`, {
+    const response = await fetch(`http://localhost:9090/api/stationManager/v1/personal/update/${stationManagerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -368,7 +368,7 @@ export const updateStationManagerPersonalInfo = async (infoBody, stationManagerI
 };
 
 export const disableStationManager= async (stationManagerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationManager/v1/update/disable/${stationManagerId}`, {
+    const response = await fetch(`http://localhost:9090/api/stationManager/v1/update/disable/${stationManagerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -383,7 +383,7 @@ export const disableStationManager= async (stationManagerId) => {
  * */
 
 export const getDeliveringParcelsDataOfParcelStation = async (stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcel/v1/part-data/parcel-station/delivering/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcel/v1/part-data/parcel-station/delivering/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -394,7 +394,7 @@ export const getDeliveringParcelsDataOfParcelStation = async (stationId) => {
 };
 
 export const getStoredParcelsDataOfParcelStation = async (stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcel/v1/part-data/parcel-station/stored/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcel/v1/part-data/parcel-station/stored/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -409,7 +409,7 @@ export const getStoredParcelsDataOfParcelStation = async (stationId) => {
  * */
 
 export const updateRegisteredAccountInfo = async (infoBody, accountId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/registeredAccount/v1/update/${accountId}`, {
+    const response = await fetch(`http://localhost:9090/api/registeredAccount/v1/update/${accountId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -425,7 +425,7 @@ export const updateRegisteredAccountInfo = async (infoBody, accountId) => {
  * */
 
 export const refreshParcelsStatusForCourier = async (parcelTrackingCode, statusInfo) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelHistoryStatus/v1/refresh-status/${parcelTrackingCode}/${statusInfo}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelHistoryStatus/v1/refresh-status/${parcelTrackingCode}/${statusInfo}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -436,7 +436,7 @@ export const refreshParcelsStatusForCourier = async (parcelTrackingCode, statusI
 };
 
 export const refreshParcelsStatusInBatchForCourier = async (parcelTrackingCodes, statusInfo) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelHistoryStatus/v1/refresh-status-in-batch/${statusInfo}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelHistoryStatus/v1/refresh-status-in-batch/${statusInfo}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -452,7 +452,7 @@ export const refreshParcelsStatusInBatchForCourier = async (parcelTrackingCodes,
  * */
 
 export const addPlaceParcelsRecordsDataOfStation = async (parcelIds, stationManagerId, stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationParcelsToPlace/v1/place-parcels-records/${stationManagerId}/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/stationParcelsToPlace/v1/place-parcels-records/${stationManagerId}/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -464,7 +464,7 @@ export const addPlaceParcelsRecordsDataOfStation = async (parcelIds, stationMana
 };
 
 export const getPlaceParcelsRecordsDataOfStation = async (stationManagerId, stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationParcelsToPlace/v1/search/place-parcels-records/${stationManagerId}/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/stationParcelsToPlace/v1/search/place-parcels-records/${stationManagerId}/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -475,7 +475,7 @@ export const getPlaceParcelsRecordsDataOfStation = async (stationManagerId, stat
 };
 
 export const deletePlaceParcelsRecordsDataOfStation = async (stationManagerId, stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/stationParcelsToPlace/v1/remove/place-parcels-records/${stationManagerId}/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/stationParcelsToPlace/v1/remove/place-parcels-records/${stationManagerId}/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -490,7 +490,7 @@ export const deletePlaceParcelsRecordsDataOfStation = async (stationManagerId, s
  * */
 
 export const getShelvesStorageDataOfParcelStation = async (stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelStationShelf/v1/shelves-storage-data/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelStationShelf/v1/shelves-storage-data/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -501,7 +501,7 @@ export const getShelvesStorageDataOfParcelStation = async (stationId) => {
 }
 
 export const placeOneParcelToParcelStationShelf = async (parcelId, values,stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelStationShelf/v1/place-parcel/${parcelId}/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelStationShelf/v1/place-parcel/${parcelId}/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -517,7 +517,7 @@ export const placeOneParcelToParcelStationShelf = async (parcelId, values,statio
 }
 
 export const resetOneParcelStationAllShelvesData = async (stationId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelStationShelf/v1/reset-shelves-storage-data/${stationId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelStationShelf/v1/reset-shelves-storage-data/${stationId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -532,7 +532,7 @@ export const resetOneParcelStationAllShelvesData = async (stationId) => {
  * */
 
 export const sendInformationNotificationData = async (sendInfo, sendWay) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/infoNotification/send-notification/${sendWay}`, {
+    const response = await fetch(`http://localhost:9090/api/infoNotification/send-notification/${sendWay}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -555,7 +555,7 @@ export const sendInformationNotificationData = async (sendInfo, sendWay) => {
  * */
 
 export const getParcelPickupCodesByCustomerId = async (customerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/parcelPickupCode/v1/search/customer/${customerId}`, {
+    const response = await fetch(`http://localhost:9090/api/parcelPickupCode/v1/search/customer/${customerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
@@ -570,7 +570,7 @@ export const getParcelPickupCodesByCustomerId = async (customerId) => {
  * */
 
 export const getEcommerceWebsiteInfoStatisticsByCustomerId = async (customerId) => {
-    const response = await fetch(`https://fyp-emerald-b9f8febb1c59.herokuapp.com/api/ecommerceWebsite/v1/info-statistics/customer/${customerId}`, {
+    const response = await fetch(`http://localhost:9090/api/ecommerceWebsite/v1/info-statistics/customer/${customerId}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': window.sessionStorage.getItem('token')
